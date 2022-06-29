@@ -12,7 +12,7 @@ export const Navbars = () => {
       variant="dark"
       expand={expand}
       className="mb-3"
-      style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}
+      style={{ width: "90%", position: "fixed", left: "5%" }}
     >
       <Container fluid>
         <Navbar.Brand href="#">The Food List</Navbar.Brand>

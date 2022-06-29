@@ -1,0 +1,60 @@
+.Food-List-Header {
+  border: 2px solid black;
+  margin-top: 8vh;
+  margin-left: 5%;
+  /* height: 90vh; */
+  width: 90%;
+  position: fixed;
+  text-align: center;
+}
+.List-Container {
+  border: 2px solid black;
+  margin-top: 15vh;
+  margin-left: 5%;
+  height: 83vh;
+  width: 90%;
+  position: fixed;
+  text-align: center;
+  overflow: scroll;
+}
+.Item_List {
+  border-bottom: 2px solid black;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.Item-p-div {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* border: 2px solid black; */
+}
+.Item-p {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+  .Item-p {
+    font-size: 2vw;
+    font-weight: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Item-p {
+    font-size: 3vw;
+    font-weight: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .Item-p {
+    font-size: 4vw;
+    font-weight: 0;
+  }
+}
