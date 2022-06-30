@@ -16,7 +16,7 @@
 
 ## Demo 🎥
 
-Deployed Link: [Vocab Web Site Link](https://101innovationyogendra.netlify.app/)
+Deployed Link: [101 Innovation Web Site Link](https://101innovationyogendra.netlify.app/)
 
 
 ## Author 🤝
