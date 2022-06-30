@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-// import CloseIcon from "@mui/icons-material/Close";
-// import { addButton, cardClicked, NewWord } from "../../Redux/Action/action";
 
 const PopUpModal = styled.div`
   border: 2px solid black;
@@ -44,14 +41,11 @@ const TableWrapper = styled.div`
 `;
 
 export const FoodDetail = (props) => {
-  //   const d = useSelector((state) => state.card);
   const data = props.singleItem;
   console.log("72", data);
-  //   const dispatch = useDispatch();
   function onClick() {
     props.setIsShow(false);
     console.log("140", props.isShow);
-    //   dispatch(cardClicked(false));
   }
 
   return (
