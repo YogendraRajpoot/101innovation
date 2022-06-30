@@ -31,19 +31,6 @@ export const Navbars = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="#">Home</Nav.Link>
               <Nav.Link href="#">Link</Nav.Link>
-              {/* <NavDropdown
-                title="Dropdown"
-                id={`offcanvasNavbarDropdown-expand-${expand}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown> */}
             </Nav>
             {/* <Form className="d-flex">
               <FormControl

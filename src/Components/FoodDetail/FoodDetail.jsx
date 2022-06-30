@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const PopUpModal = styled.div`
@@ -9,11 +9,30 @@ const PopUpModal = styled.div`
   height: 90vh;
   margin-left: auto;
   margin-right: auto;
-  // overflow: scroll;
   .buttonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background: transparent;
     border: 2px solid black;
-    padding: 4vh;
+    padding: 2vh;
+  }
+  .buttonDiv p {
+    font-weight: 600;
+    font-size: 1vw;
+    @media screen and (max-width: 1200px) {
+      font-size: 2vw;
+      font-weight: 0;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 3vw;
+      font-weight: 0;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 4vw;
+      font-weight: 0;
+    }
   }
   .tableDiv {
     padding: 2%;
@@ -24,7 +43,7 @@ const TableWrapper = styled.div`
   border: 2px solid;
   background: transparent;
   width: 100%;
-  height: 76vh;
+  height: 70vh;
   overflow: scroll;
   table {
     width: 100%;
@@ -37,37 +56,42 @@ const TableWrapper = styled.div`
     width: 50%;
     border: 2px solid;
     text-align: center;
+    @media screen and (max-width: 1200px) {
+      font-size: 2vw;
+      font-weight: 0;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 2.5vw;
+      font-weight: 0;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 3vw;
+      font-weight: 0;
+    }
   }
 `;
 
 export const FoodDetail = (props) => {
-  const data = props.singleItem;
-  console.log("72", data);
+  const data = props.singleItem; //store all data of single item
   function onClick() {
-    props.setIsShow(false);
-    console.log("140", props.isShow);
+    // function for closing the page
+    props.setIsShow(false); // update prop.setIsShow with false so that page will close
   }
 
   return (
-    // <>
-    //   <div>header</div>
-    // </>
-    // <Wrapper>
     <PopUpModal>
       <div className="buttonDiv">
-        <button style={{ float: "right" }} onClick={onClick}>
-          X{/* <CloseIcon /> */}
-        </button>
+        <div>
+          <p>{data.product_name}</p>
+          <p>({data.generic_name})</p>
+        </div>
+        {/* closing button for closing the page */}
+        <button onClick={onClick}>X</button>
       </div>
       <div className="tableDiv">
+        {/* display all item in table */}
         <TableWrapper>
           <table>
-            {/* <thead>
-            <tr>
-              <th>one</th>
-              <th>one</th>
-              </tr>
-            </thead> */}
             <tbody>
               {Object.entries(data).map(([key, values]) => (
                 <tr>
@@ -88,6 +112,5 @@ export const FoodDetail = (props) => {
         </TableWrapper>
       </div>
     </PopUpModal>
-    // </Wrapper>
   );
 };
