@@ -1,12 +1,13 @@
 import "./App.css";
 import { List } from "./Components/List/List";
-import { Navbars } from "./Components/Navbars/Navbars";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="Container">
-      <Navbars />
-      <List/>
+      <Routes>
+        <Route path="/" element={<List />} />
+      </Routes>
     </div>
   );
 }

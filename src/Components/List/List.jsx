@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./list.css";
 import Icon from "../../Image/icon.png";
 import { FoodDetail } from "../FoodDetail/FoodDetail";
+import { Navbars } from "../Navbars/Navbars";
 
 export const List = () => {
   const [isShow, setIsShow] = useState(false);
@@ -16,12 +17,17 @@ export const List = () => {
     response = await response.json();
     setData(response);
   };
-  console.log("140",isShow);
+  console.log("140", isShow);
   console.log("14", data);
   return (
     <>
+      <Navbars setIsShow={setIsShow}/>
       {isShow ? (
-        <FoodDetail singleItem={singleItem} isShow={isShow} setIsShow={setIsShow} />
+        <FoodDetail
+          singleItem={singleItem}
+          isShow={isShow}
+          setIsShow={setIsShow}
+        />
       ) : (
         <>
           <div className="Food-List-Header">

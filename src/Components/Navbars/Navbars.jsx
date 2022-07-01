@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 
-export const Navbars = () => {
+export const Navbars = (props) => {
   const expand = false;
   return (
     //     <>
@@ -29,18 +29,8 @@ export const Navbars = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#">Link</Nav.Link>
+              <Nav.Link onClick={() => props.setIsShow(false)}>Home</Nav.Link>
             </Nav>
-            {/* <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form> */}
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
