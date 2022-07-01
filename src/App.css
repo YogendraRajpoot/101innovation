@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .Container {
   border: 2px solid black;

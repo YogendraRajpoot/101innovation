@@ -17,8 +17,7 @@ export const List = () => {
     response = await response.json();
     setData(response);
   };
-  console.log("140", isShow);
-  console.log("14", data);
+  
   return (
     <>
       <Navbars setIsShow={setIsShow}/>
